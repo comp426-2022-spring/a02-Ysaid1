@@ -105,7 +105,7 @@ function flipACoin(call) {
     resultOfFlip = resultOfFlip + 'lose'
   }
   //create an object to hold the variables
-  var checkResult  = {call:call, flip:'', result : ''};
+  var checkResult  = {call:call, flip:'noo', result : ''};
   //add the flip result to flip
   checkResult.flip = flippingACoin;
   //add the result of the flip to the result object variable
