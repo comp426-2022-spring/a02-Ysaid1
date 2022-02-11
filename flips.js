@@ -4,7 +4,7 @@ import {coinFlips, countFlips} from "./modules/coin.mjs";
 //Get command line
 const args = minimist(process.argv.slice(2))
 //if no arguement is given, flip once
-if (args.number == undefined || args.number == null){
+if (args.number == undefined){
     //set the number of arguements to one
     args.number = 1;
 }
