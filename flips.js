@@ -13,7 +13,7 @@ if (args.number == ''){
     console.log(countFlips(arrayForFlips)) 
 }
     //print out the array of flips and the count of heads and tails
-else if (isNaN(args.number) == true){
+else if (isNaN(args.number) == true || args.number == null){
     console.log("Error: no input.");
     console.log("Usage: node flips --call=(heads?|tails?)");
 }
