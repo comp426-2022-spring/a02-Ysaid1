@@ -1,14 +1,10 @@
 import minimist from 'minimist';
-import { createRequire } from 'module';
 //Importing the functions
 import {coinFlips, countFlips} from "./modules/coin.mjs";
 //Get command line
-const require = createRequire(import.meta.url);
-const args = require('minimist')(process.argv.slice(2));
-args['number']
-const numberToBeSelected = args.number;
+const args = minimist(process.argv.slice(2))
 //if no arguement is given, flip once
-if (numberToBeSelected== null){
+if (args.number == undefined || args.number == null){
     //set the number of arguements to one
     args.number = 1;
 }
@@ -16,4 +12,4 @@ if (numberToBeSelected== null){
 var arrayForFlips = coinFlips(args.number);
 //print out the array of flips and the count of heads and tails
 console.log(arrayForFlips)
-console.log(countFlips(arrayForFlips))
+console.log(countFlips(arrayForFlips)) 
