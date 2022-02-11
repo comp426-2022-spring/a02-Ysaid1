@@ -7,9 +7,11 @@ const args = minimist(process.argv.slice(2)) || 1;
 if(args.number == null || args.number == ''){
     var oneCoinFlip = coinFlips(1);
     if (oneCoinFlip ==  'tails' ) {
-        console.log("{ tails: 1 }");
+        delete oneCoinFlip['tails'];
+        console.log(oneCoinFlip);
     } else {
-        console.log("{ heads: 1 }");
+        delete oneCoinFlip['heads'];
+        console.log(oneCoinFlip);
     }
 }
 //print out the array of flips and the count of heads and tails
