@@ -10,6 +10,7 @@ if (args.number == undefined){
 }
 if (args.number == null || args.number ==''){
     console.log("Error: no input.");
+    console.log("Usage: node flips --call=(heads?|tails?)"); 
 }
 //create an array to hold the number of flips given by command line
 var arrayForFlips = coinFlips(args.number);
