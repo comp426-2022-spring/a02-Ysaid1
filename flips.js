@@ -4,11 +4,11 @@ import {coinFlips, countFlips} from "./modules/coin.mjs";
 //Get command line
 const args = minimist(process.argv.slice(2))
 //if no arguement is given, flip once
-if (args.number == undefined){
+if (args.number == null){
     //set the number of arguements to one
     args.number = 1;
 }
-if (args.number == null || args.number ==''){
+if (args.number == undefined){
     console.log("Error: no input.");
     console.log("Usage: node flips --call=(heads?|tails?)"); 
 }
