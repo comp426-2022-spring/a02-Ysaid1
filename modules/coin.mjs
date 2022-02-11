@@ -114,12 +114,7 @@ function flipACoin(call) {
   if (call == "" || null){
     throw "Error: no input"
   }
-  if (call == 'tails' || 'heads') {
-    throw "Error: invalid input"
-  }
-  else {
   return checkResult;
-}
 }
 
 /** Export 
