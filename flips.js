@@ -6,17 +6,14 @@ const args = minimist(process.argv.slice(2))
 //create an array to hold the number of flips given by command line
 var arrayForFlips = coinFlips(args.number);
 //if no arguement is given, flip once
-if (args.number == ''){
-    //set the number of arguements to one
-    args.number = 1;
-    console.log(arrayForFlips)
-    console.log(countFlips(arrayForFlips)) 
-}
-    //print out the array of flips and the count of heads and tails
-else if (isNaN(args.number) == true || args.number == null){
-    console.log("Error: no input.");
-    console.log("Usage: node flips --call=(heads?|tails?)");
-}
+if(args.number == ''){
+    var oneCoinFlip = coinFlips(1);
+    if (oneCoinFlip ==  'tails' ) {
+        console.log("{ tails: 1 }");
+    } else {
+        console.log("{ heads: 1 }");
+    }
+}//print out the array of flips and the count of heads and tails
 else {
     console.log(arrayForFlips)
     console.log(countFlips(arrayForFlips)) 
