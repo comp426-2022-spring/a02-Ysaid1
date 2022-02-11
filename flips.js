@@ -3,7 +3,6 @@ import minimist from 'minimist';
 import {coinFlips, countFlips} from "./modules/coin.mjs";
 //Get command line
 const args = minimist(process.argv.slice(2)) || 1;
-//create an array to hold the number of flips given by command line
 //if no arguement is given, flip once
 if(args.number == null || args.number == ''){
     var oneCoinFlip = coinFlips(1);
