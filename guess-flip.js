@@ -6,7 +6,7 @@ import { flipACoin } from "./modules/coin.mjs";
 //take command line input
 const args = minimist(process.argv.slice(2))
 //if arguement is not heads or tails or it is undefined or nothing print out an error
-if (args.call == undefined || args.call == null || (args.call != 'tails' && args.call != 'heads')){
+if (args.call != 'tails' && args.call != 'heads'){
     //set the number of arguements to one
     console.log("Error: no input.");
     console.log("Usage: node guess-flip --call=[heads|tails]");
