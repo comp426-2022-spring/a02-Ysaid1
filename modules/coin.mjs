@@ -112,7 +112,10 @@ function flipACoin(call) {
   checkResult.result = resultOfFlip;
   //return the object
   if(call == null || call == "") {
-  throw 'No input';
+  throw 'Error: No input';
+  } 
+  else {
+    throw 'Error: Invalid input'
   }
   return checkResult;
 }
