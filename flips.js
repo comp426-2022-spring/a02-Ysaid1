@@ -3,13 +3,14 @@ import minimist from 'minimist';
 import {coinFlips, countFlips} from "./modules/coin.mjs";
 //Get command line
 const args = minimist(process.argv.slice(2)) || 1;
+var arrayForFlips = coinFlips(args.number);
 //if no arguement is given, flip once
 if(args.number == null){
     var oneCoinFlip = coinFlips(1);
     if (oneCoinFlip ==  'tails' ) {
-        console.log(oneCoinFlip);
+        console.log("{ tails: 1 }");
     } else {
-        console.log(oneCoinFlip);
+        console.log("{ heads: 1 }");
     }
 }
 //print out the array of flips and the count of heads and tails
