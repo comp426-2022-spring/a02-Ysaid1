@@ -111,13 +111,15 @@ function flipACoin(call) {
   //add the result of the flip to the result object variable
   checkResult.result = resultOfFlip;
   //return the object
-  if(call == null){
-  throw 'Error : No input.';
+  if (call == "" || null){
+    throw "Error: no input"
+  }
+  if (call == 'tails' || 'heads') {
+    throw "Error: invalid input"
   }
   else {
-    throw 'Error: Invalid input.'
-  }
   return checkResult;
+}
 }
 
 /** Export 
