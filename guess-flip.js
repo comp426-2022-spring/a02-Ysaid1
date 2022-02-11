@@ -11,7 +11,6 @@ if (args.call != 'tails' && args.call != 'heads'){
     console.log("Error: no input.");
     console.log("Usage: node guess-flip --call=[heads|tails]");
     //exit from the program
-    process.exit()
 }
 //if the command line is anything else check the result of the coin loss
 else{
