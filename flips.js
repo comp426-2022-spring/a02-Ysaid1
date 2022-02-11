@@ -6,7 +6,7 @@ const args = minimist(process.argv.slice(2))
 //create an array to hold the number of flips given by command line
 var arrayForFlips = coinFlips(args.number);
 //if no arguement is given, flip once
-if(args.number == ''){
+if(args.number == null){
     var oneCoinFlip = coinFlips(1);
     if (oneCoinFlip ==  'tails' ) {
         console.log("{ tails: 1 }");
@@ -15,7 +15,8 @@ if(args.number == ''){
     }
 }//print out the array of flips and the count of heads and tails
 else {
-    console.log(arrayForFlips)
-    console.log(countFlips(arrayForFlips)) 
+    var flipResut =  coinFlips(args.number);
+    console.log(flipResut)
+    console.log(countFlips(flipResut)) 
 }
 
