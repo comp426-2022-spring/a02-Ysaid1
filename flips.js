@@ -9,15 +9,13 @@ var arrayForFlips = coinFlips(args.number);
 if (args.number == ''){
     //set the number of arguements to one
     args.number = 1;
+}
     //print out the array of flips and the count of heads and tails
-    console.log(arrayForFlips)
-    console.log(countFlips(arrayForFlips)) 
-}
-if (isNaN(args.number) == false){
-    console.log(arrayForFlips)
-    console.log(countFlips(arrayForFlips)) 
-}
 if (args.number == undefined || isNaN(args.number) == true){
     console.log("Error: no input.");
     console.log("Usage: node flips --call=(heads?|tails?)");
+}
+else { 
+    console.log(arrayForFlips)
+    console.log(countFlips(arrayForFlips)) 
 }
