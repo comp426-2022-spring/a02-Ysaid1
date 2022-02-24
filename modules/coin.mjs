@@ -75,7 +75,7 @@ function countFlips(array) {
       countOfHeadsAndTails.tails = countOfHeadsAndTails.tails + 1;
     }
   }
-  //remove extra wording
+  //remove  tails if it doesn't exist
   if (countOfHeadsAndTails.heads == 1){
     delete countOfHeadsAndTails.tails;
   }
