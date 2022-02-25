@@ -26,11 +26,11 @@ if (args.number != null){
             //add the result
             result +=(`'${numberOfFlips[iterator]}'`)
           }
-          //close the result
-          result += `]`
-          //return the print array
-          return result;
-        }
+    //close the result
+    result += `]`
+    //return the print array
+    return result;
+    }
 //get the result
 var flipResut = coinFlips(args.number);
 //print the statements
