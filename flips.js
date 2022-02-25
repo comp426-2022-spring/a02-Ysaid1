@@ -14,9 +14,27 @@ if(args.number == null){
     }
 }
 //print out the array of flips and the count of heads and tails
-else {
-    var flipResut = coinFlips(args.number);
-    console.log(flipResut)
-    console.log(countFlips(flipResut)) 
+let result = '['
+if (args.number != null){
+    function print(numberOfFlips){
+        //go through the number of flips
+        for (let iterator = 0; iterator < numberOfFlips.length; iterator++){
+            //as long as there's an input
+            if (iterator!= 0) {
+              result += (`,`)
+            }
+            //add the result
+            result +=(`'${numberOfFlips[iterator]}'`)
+          }
+          //close the result
+          result += `]`
+          //return the print array
+          return result;
+        }
+//get the result
+var flipResut = coinFlips(args.number);
+//print the statements
+console.log(print(flipResut))
+console.log(countFlips(flipResut)) 
 }
 
