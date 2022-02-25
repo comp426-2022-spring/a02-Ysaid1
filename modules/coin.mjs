@@ -62,7 +62,7 @@ function coinFlips(flips) {
 function countFlips(array) {
   //create a new object to hold number of heads and tails
   //set heads and tails to 0
-  var countOfHeadsAndTails = {heads: 0, tails: 0}
+  var countOfHeadsAndTails = {tails: 0, heads: 0}
   //loop through
   for (let i = 0; i < array.length; i++){
     //increment number of heads if it is heads
