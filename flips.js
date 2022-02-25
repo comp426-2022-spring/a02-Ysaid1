@@ -7,7 +7,7 @@ const args = minimist(process.argv.slice(2)) || 1;
 if(args.number == null){
     var oneCoinFlip = coinFlips(1);
     console.log(oneCoinFlip);
-    if (oneCoinFlip ==  ['tails']) {
+    if (oneCoinFlip ==  'tails') {
         console.log('{ tails: 1 }');
     } else {
         console.log('{ heads: 1 }');
